@@ -1,0 +1,23 @@
+{
+    "name": "DevOps Branch-Naming extension",
+    "description": "The purpose of this extension is to make naming of new branches in Azure DevOps easier, faster and more reliable.",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://dev.azure.com/*"
+            ],
+            "js": [
+                "devops.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
