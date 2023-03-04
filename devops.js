@@ -26,8 +26,8 @@ function getBranchName() {
         .replaceAll("_", "-").replaceAll("?", "").replaceAll("#", "").replaceAll("!", "")
         .replaceAll("\"", "").replaceAll("'", "").replaceAll("!", "").replaceAll("$", "")
         .replaceAll(":", "").replaceAll(".", "").replaceAll(",", "").replaceAll("&amp;", "")
-        .replaceAll("=", "").replaceAll("&lt;", "").replaceAll("&gt;", "")
-        .replaceAll(" - ", " ").replaceAll("-", "");
+        .replaceAll("=", "").replaceAll("&lt;", "").replaceAll("&gt;", "").replaceAll("/", "").replaceAll("\\", "")
+        .replaceAll(" - ", " ").replaceAll("  ", " ").replaceAll("-", "");
     itemName = itemName.replaceAll(" ", "-");
 
     return itemId + "-" + itemName;
