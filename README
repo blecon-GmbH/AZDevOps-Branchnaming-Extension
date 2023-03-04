@@ -1,0 +1,5 @@
+# Azure DevOps Branchnaming Extension
+
+This repository contains the code of an extension for chromium based browsers.
+The purpose of this extension it to automatically generate git branchnames from context given in the individual PBIs in Azure DevOps boards.
+The current pattern is hard coded to <type>/<item-id>-<cleand-name-of-the-item>.
