@@ -28,9 +28,18 @@ function getBranchName() {
         .replaceAll(":", "").replaceAll(".", "").replaceAll(",", "").replaceAll("&amp;", "")
         .replaceAll("=", "").replaceAll("&lt;", "").replaceAll("&gt;", "").replaceAll("/", "").replaceAll("\\", "")
         .replaceAll(" - ", " ").replaceAll("  ", " ").replaceAll("-", "");
-    itemName = itemName.replaceAll(" ", "-");
 
-    return itemId + "-" + itemName;
+        var finalName = itemId;
+        itemName.split(" ").forEach(function (namePart) {
+            var testString = finalName + "-" + namePart;
+            if(testString.length > 50)
+                return;
+            
+            finalName = testString;
+
+        });
+
+    return finalName;
 }
 
 function getBranchType() {
